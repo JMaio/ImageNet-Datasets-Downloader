@@ -322,9 +322,10 @@ for class_wnid in classes_to_scrape:
     time.sleep(0.05)
     resp = requests.get(url_urls)
 
-    class_folder = os.path.join(imagenet_images_folder, class_name)
-    if not os.path.exists(class_folder):
-        os.mkdir(class_folder)
+# #   don't create class folders
+#     class_folder = os.path.join(imagenet_images_folder, class_name)
+#     if not os.path.exists(class_folder):
+#         os.mkdir(class_folder)
 
     class_images.value = 0
 
