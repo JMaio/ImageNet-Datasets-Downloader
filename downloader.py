@@ -296,7 +296,8 @@ def get_image(img_url):
     if (len(img_name) <= 1):
         return finish('failure')
 
-    img_file_path = os.path.join(class_folder, img_name)
+    # save all to imagenet folder
+    img_file_path = os.path.join(imagenet_images_folder, img_name)
     logging.debug(f'Saving image in {img_file_path}')
 
     with open(img_file_path, 'wb') as img_f:
